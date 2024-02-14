@@ -17,7 +17,18 @@ class transactionController extends Controller
     {
         $email = auth()->user()->email;
 
-        $cashin = Cashin::join('sites', 'cashins.siteid', '=', 'sites.id')->orderByDesc('cashins.id')->select('cashins.*', 'sites.*', 'sites.name as site_name', 'cashins.created_at as dateci')->where('email', $email)->whereDate('cashins.created_at', '>=', now()->subDays(3))->take(5)->get();
+        $cashin = Cashin::join('sites', 'cashins.siteid', '=', 'sites.id')
+            ->orderByDesc('cashins.id')
+            ->select(
+                'cashins.*',
+                'sites.*',
+                'sites.name as site_name',
+                'cashins.created_at as dateci'
+            )
+            ->where('email', $email)
+            ->whereDate('cashins.created_at', '>=', now()->subDays(3))
+            ->take(5)
+            ->get();
         return view('players.transactions.cashin', compact('cashin'));
     }
 
@@ -25,8 +36,42 @@ class transactionController extends Controller
     {
         $email = auth()->user()->email;
         // $getallcorequest = Payout::where('email', $email)->get();
-        $getallcorequest = Payout::join('sites', 'payouts.site', '=', 'sites.id')->where('payouts.email', $email)->orderByDesc('payouts.id')->select('payouts.*', 'sites.*', 'sites.id as site_id')->get();
+        $getallcorequest = Payout::join(
+            'sites',
+            'payouts.site',
+            '=',
+            'sites.id'
+        )
+            ->where('payouts.email', $email)
+            ->orderByDesc('payouts.id')
+            ->select('payouts.*', 'sites.*', 'sites.id as site_id')
+            ->get();
         return view('players.transactions.cashout', compact('getallcorequest'));
+    }
+
+    public function deactivated()
+    {
+        $email = auth()->user()->email;
+
+        $subcript = Subscription::join(
+            'sites',
+            'sites.id',
+            '=',
+            'subscriptions.site'
+        )
+            ->select('sites.*', 'subscriptions.*')
+            ->where('email', $email)
+            ->where('isactive', 0)
+            ->get();
+
+        return view('players.deactivated', compact('subcript'));
+    }
+
+    public function deactivatedUpdate($id)
+    {
+        Subscription::find($id)->update(['isactive' => 1]);
+
+        return redirect()->back();
     }
 
     /**

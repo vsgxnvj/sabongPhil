@@ -168,17 +168,17 @@
 
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullsasdcreen" href="/home" role="button">
-                        <i class="fas fa-home"></i> HOME
+                        <i class="fas fa-home"></i> <span style="color: orange">HOME</span>
                     </a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" data-widget="fullsasdcreen" href="/list-cashout" role="button">
-                        <i class="fas fa-wallet"></i> <small>WITHDRAW</small>
+                        <small style="font-size: 9px; color: red; font-weight: 700">WITHDRAW HISTORY</small>
                     </a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" data-widget="fullsasdcreen" href="/list-cashins" role="button">
-                        <i class="fas fa-money-bill-wave"></i> <small>CREDITS</small>
+                         <small style="font-size: 9px; color: red; font-weight: 700">CREDIT HISTORY</small>
                     </a>
                 </li>
                 {{-- <li class="nav-item">
@@ -264,6 +264,16 @@
                                 <i class="nav-icon fas fa-history"></i>
                                 <p>
                                     CASHOUT HISTORY
+                                </p>
+                            </a>
+                        </li>
+
+                          <li class="nav-item">
+                            <a href="/deactivated"
+                                class="nav-link{{ request()->is('deactivated') ? ' active' : '' }}" >
+                                <i class="nav-icon fas fa-user-circle"></i>
+                                <p>
+                                   DEACTIVATED ACCOUNTS
                                 </p>
                             </a>
                         </li>

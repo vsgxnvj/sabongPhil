@@ -67,7 +67,7 @@
                                             class="fas fa-copy"></i> | COPY</button>
 
 
-                                    <div class="card-text">USERNAME: {{ $item->username }} </div>
+                                    <div class="card-text" style="font-size: 20px">USERNAME: {{ $item->username }} </div>
                                     <div class="card-text">PASSWORD:
                                         {{ substr($item->password, 0, 4) . str_repeat('*', strlen($item->password) - 4) }}
                                     </div>
@@ -80,15 +80,15 @@
 
                                     @if ($item->sitestatus == 0)
                                         <h5 style="color: red">PENDING FOR APPROVAL. PLEASE CONTACT CHAT SUPPORT</h5>
-                                        <a href="" class="btn btn-outline-success" tabindex="_blank">FB MESSEGER</a>
+                                        <a href="http://m.me/159128657276843" class="btn btn-outline-success" target="_blank">FB MESSEGER</a>
                                     @else
-                                        <a href="{{ $item->link }}" class="btn btn-outline-success btn-xs btn-block mb-1"
+                                        <a href="{{ $item->link }}" class="btn btn-outline-success btn-lg btn-block mb-1"
                                             target="_blank"><i class="fas fa-sign-in-alt"></i> | LOGIN SITE</a>
                                         <a href="/co-request/{{ $item->username }}"
-                                            class="btn btn-outline-info btn-xs btn-block mb-1"> <i
+                                            class="btn btn-outline-info btn-lg btn-block mb-1"> <i
                                                 class="fas fa-cash-register"></i> | WITHDRAW</a>
                                         <a href="/ci-request/{{ $item->id }}"
-                                            class="btn btn-outline-warning btn-xs btn-block mb-1"><i
+                                            class="btn btn-outline-warning btn-lg btn-block mb-1"><i
                                                 class="fas fa-shopping-cart"></i> | BUY CREDITS</a>
                                     @endif
 

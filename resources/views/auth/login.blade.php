@@ -438,12 +438,12 @@
                 <hr>
 
         </div>
-        <h5 style="text-align:center">OR</h5>
-        <br>
+        {{-- <h5 style="text-align:center">OR</h5> --}}
+        {{-- <br> --}}
 
 
         <!-- google	 -->
-        <div>
+        {{-- <div>
             <a class="btn-google" href="{{ route('google-auth') }}">
                 <div class="google-content">
                     <div class="logo">
@@ -466,7 +466,7 @@
                 </div>
             </a>
         </div>
-        <br>
+        <br> --}}
         {{-- <!-- facebook	 -->
         <div>
             <a class="btn-fb" href="">
