@@ -152,9 +152,9 @@
                             class="fas fa-bars"></i></a>
                 </li>
                 {{-- <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/home" class="nav-link">Home</a>
+      </li> --}}
+                {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li> --}}
             </ul>
@@ -167,16 +167,26 @@
                 <!-- Notifications Dropdown Menu -->
 
                 <li class="nav-item">
-                    {{-- <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a> --}}
+                    <a class="nav-link" data-widget="fullsasdcreen" href="/home" role="button">
+                        <i class="fas fa-home"></i> HOME
+                    </a>
                 </li>
-                <li class="nav-item">
+                 <li class="nav-item">
+                    <a class="nav-link" data-widget="fullsasdcreen" href="/list-cashout" role="button">
+                        <i class="fas fa-wallet"></i> <small>WITHDRAW</small>
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" data-widget="fullsasdcreen" href="/list-cashins" role="button">
+                        <i class="fas fa-money-bill-wave"></i> <small>CREDITS</small>
+                    </a>
+                </li>
+                {{-- <li class="nav-item">
                     <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#"
                         role="button">
                         <i class="fas fa-th-large"></i>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </nav>
         <!-- /.navbar -->
