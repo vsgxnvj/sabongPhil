@@ -117,6 +117,14 @@
                                             <span class="btn-label"> <i class="fas fa-sign-in-alt"></i>
                                             </span>Success
                                         </button>
+                                        <button type="button" class="btn btn-labeled btn-primary">
+                                            <span class="btn-label"> <i class="fas fa-sign-in-alt"></i>
+                                            </span>Success
+                                        </button>
+                                        <button type="button" class="btn btn-labeled btn-outline-warning">
+                                            <span class="btn-label"> <i class="fas fa-sign-in-alt"></i>
+                                            </span>Success
+                                        </button>
                                     @endif
 
                                 </div>
