@@ -1,6 +1,27 @@
 @extends('layouts.member')
 
 @section('content')
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+        .btn-label {
+            position: relative;
+            left: -12px;
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 3px 0 0 3px;
+        }
+
+        .btn-labeled {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+        }
+    </style>
     <hr>
 
 
@@ -80,7 +101,8 @@
 
                                     @if ($item->sitestatus == 0)
                                         <h5 style="color: red">PENDING FOR APPROVAL. PLEASE CONTACT CHAT SUPPORT</h5>
-                                        <a href="http://m.me/159128657276843" class="btn btn-outline-success" target="_blank">FB MESSEGER</a>
+                                        <a href="http://m.me/159128657276843" class="btn btn-outline-success"
+                                            target="_blank">FB MESSEGER</a>
                                     @else
                                         <a href="{{ $item->link }}" class="btn btn-outline-success btn-lg btn-block mb-1"
                                             target="_blank"><i class="fas fa-sign-in-alt"></i> | LOGIN SITE</a>
@@ -90,6 +112,11 @@
                                         <a href="/ci-request/{{ $item->id }}"
                                             class="btn btn-outline-warning btn-lg btn-block mb-1"><i
                                                 class="fas fa-shopping-cart"></i> | BUY CREDITS</a>
+
+                                        <button type="button" class="btn btn-labeled btn-success">
+                                            <span class="btn-label"> <i class="fas fa-sign-in-alt"></i>
+                                            </span>Success
+                                        </button>
                                     @endif
 
                                 </div>
