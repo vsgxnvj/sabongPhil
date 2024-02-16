@@ -15,7 +15,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Checking receipts</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><span class="usernameTitle"></span></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -77,7 +77,7 @@
                             @if ($item->reciboimage == null)
                                 NO IMAGE RECEIPT
                             @else
-                                <button data-id="{{ $item->ciId }}"
+                                <button data-username="{{ $item->username }}" data-id="{{ $item->ciId }}"
                                     data-urlimg="{{ asset('uploads') }}/{{ $item->reciboimage }}"
                                     class="btn btn-outline-warning thisimg btn-block" data-toggle="modal"
                                     data-target=".modalrcp" data-backdrop="static" data-keyboard="false">SHOW</button>
@@ -120,7 +120,7 @@
                         <td>{{ $item->amount }}</td>
                         <td>{{ $item->receiver }}</td>
                         <td>
-                            <button data-id="{{ $item->ciId }}"
+                            <button data-username="{{ $item->username }}" data-id="{{ $item->ciId }}"
                                 data-urlimg="{{ asset('uploads') }}/{{ $item->reciboimage }}"
                                 class="btn btn-outline-warning btn-block thisimg" data-toggle="modal"
                                 data-target=".modalrcp" data-backdrop="static" data-keyboard="false">SHOW</button>
@@ -213,12 +213,15 @@
         $('.example').on('click', '.thisimg', function() {
             var imgs = $(this).attr('data-urlimg');
             var subId = $(this).attr('data-id');
+            var username = $(this).attr('data-username');
 
 
             $('.igmgg').attr('src', imgs);
             $('.igmgg').attr('href', imgs);
             $('#subId').val(subId);
             $('#subIdreject').val(subId);
+            $('.usernameTitle').text(username);
+            
         });
     </script>
 @endsection

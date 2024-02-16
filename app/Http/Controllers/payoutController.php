@@ -43,7 +43,7 @@ class payoutController extends Controller
                 'cashins.remarks as cremarks'
             )
             ->get();
-
+ 
         return view('admintools.cashins.index', compact('getallci'));
     }
 

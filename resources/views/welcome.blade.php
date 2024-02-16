@@ -9,13 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="{{ asset('/uploads/1706758204_logo.png') }}" type="image/x-icon">
 
+    <link rel="canonical" href="https://sabongphil.net">
+    <link rel="sitemap" href="https://sabongphil.net/sitemap.xml" title="Sitemap" type="application/xml">
+
     @include('meta::manager', [
-        'title' => 'SABONG PILIPINAS',
+        'title' => config('app.name', 'Laravel'),
         'description' =>
-            'Visit the Sabong worldcup websites to immerse yourself in a comprehensive online community dedicated to Sabong enthusiasts. Discover a wealth of resources including gamecock breeding tips, training techniques, match analysis, and discussions on various aspects of the sport. Engage with fellow enthusiasts through forums, chat rooms, and social media platforms to share your experiences and stay connected with the Sabong community worldwide.',
+            'The Sabong World Cup, taking the mantle from the esteemed World Pitmaster Cup, introduces a next-level online cockfighting experience highlighted by a user-friendly interface.',
         'image' => asset('dist/assets/images/photo-1595398062934-a522dd6dd39d.jpeg'),
         'keywords' =>
-            'sabong worldwide.net login, sabong worldwide.com, sabong worldwide 2023, sabong worldwide.net, sww4, sabong worldwide 2024 com login, sabong worldwide live, sabongworldwide, sabong worldwide login, sabong worldwide register, sww4 live login, sabong ww4.net, sabong world wide, worldwide sabong, sabong worldwide live 2023, sabong worldwide.net live, sworldwide3.net login, sabong worldwide net login, www.sabong worldwide.net, sworldwide4, sww sabong, sabongww4, www sabong, sabong worldwide live register, sabong world cup, sabongworldcup, sabong worldcup0',
+            'sabong world cup, swc sabong, swc online sabong, swc sabong live, swc sabong world cup, sabong world cup live, sabong world cup site, swc sabong registration, sabong world cup register, sabongworldcup, sabong world cup 2023, sabong worldcup, sabong word cup, sabong swc, sww sabong, sabong online registration, sabong world cup login, swc sabong live today, world cup sabong, sww online sabong, swc sabong login, online sabong swc, sworldcup.net, swc online sabong live, swc logo sabong, sww sabong register, sabong worldcup.net login, sabong worldcup.com, sabong worldcup.net, sww4, sabong worldcup 2024 com login, sabong worldcup live, sabong worldcup login, sww4 live login, sabong ww4.net, sabong world wide, sabong worldcup live 2023, sabong worldcup.net live, sworldcup3.net login, sabong worldcup net login, www.sabong worldcup.net, sworldcup4, sabongww4, www sabong, sabong worldcup live register, sabongworldcup, sabong worldcup0',
+        'robots' => 'all',
     ])
 
 
@@ -178,10 +182,40 @@
                         site, Walang fake site, No scammer. Dito, puro lehitimong safe site lang.</p>
                     <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="/register">REGISTER
                             NOW</a></div>
+
+                    <div class="mbr-section-btn"><a class="btn btn-white-outline display-7"
+                            href="/sp_app.apk">DOWNLOAD APP
+                            NOW</a></div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <style>
+        .table-responsive {
+            height: 380px;
+            width: 100%;
+            overflow-y: auto;
+              overflow: hidden;
+            border: 1px solid #ebebeb;
+        }
+
+        .table-responsive:hover {
+            border-color: rgb(219, 219, 219);
+        }
+
+        table {
+            width: 100%;
+
+        }
+
+        td {
+            padding: 24px;
+            background: #eee;
+        }
+    </style>
+
 
 
     <section class="header14 cid-u28Y93a7pn" id="call-to-action-10-u28Y93a7pn">
@@ -194,11 +228,13 @@
                                 <strong>LATEST CASHOUT</strong>
                             </h1>
 
+                       
+
                             <div class="table-responsive">
                                 <table id="example" class="table table-striped table-bordered"
-                                    style="width:100%; font-size: 12px">
+                                    style="width:100%; font-size: 12px; position: relative">
                                     <thead>
-                                        <tr>
+                                        <tr class="">
                                             <th>Username</th>
                                             <th>Cashout</th>
                                             <th>Date</th>
@@ -217,9 +253,13 @@
                                                 <td>{{ $item1->username }} ({{ $item1->role }})</td>
                                                 <td>{{ number_format($item1->cashout, 2) }} PHP</td>
                                                 <td>{{ $formattedDate }}</td>
-                                                <td class="click-text"
+                                                {{-- <td class="click-text"
                                                     data-img="{{ asset('/uploads') }}/{{ $item1->images }}">
                                                     <button>SHOW IMAGE</button>
+                                                </td> --}}
+                                                <td class="click-text"
+                                                    data-img="{{ asset('/uploads') }}/{{ $item1->images }}">
+                                                    <div>SHOW IMAGE</div>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -1054,6 +1094,9 @@
     <script src="{{ asset('dist/assets/theme/js/script.js') }}"></script>
     <script src="{{ asset('dist/assets/formoid/formoid.min.js') }}"></script>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+
 
     <script>
         (function() {
@@ -1099,6 +1142,26 @@
             }
         });
     </script>
+
+
+    <script>
+        var $el = $(".table-responsive");
+
+        function anim() {
+            var st = $el.scrollTop();
+            var sb = $el.prop("scrollHeight") - $el.innerHeight();
+            $el.animate({
+                scrollTop: st < sb / 2 ? sb : 0
+            }, 40000, anim);
+        }
+
+        function stop() {
+            $el.stop();
+        }
+        anim();
+        $el.hover(stop, anim);
+    </script>
+
 
 
 

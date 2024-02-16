@@ -58,6 +58,9 @@
                                             <div>Please remember to download or capture a screenshot of the receipt and
                                                 attach it
                                                 below. We appreciate your attention to this matter!</div>
+                                            <hr>
+                                            <div>MINIMUM CASHIN: 100 Php</div>
+                                            <div>MINIMUM CASHOUT: 100 Php</div>
 
                                         </div>
 

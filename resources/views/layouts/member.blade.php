@@ -8,10 +8,11 @@
     @include('meta::manager', [
         'title' => config('app.name', 'Laravel'),
         'description' =>
-            'Visit the Sabong worldcup websites to immerse yourself in a comprehensive online community dedicated to Sabong enthusiasts. Discover a wealth of resources including gamecock breeding tips, training techniques, match analysis, and discussions on various aspects of the sport. Engage with fellow enthusiasts through forums, chat rooms, and social media platforms to share your experiences and stay connected with the Sabong community worldwide.',
+            'The Sabong World Cup, taking the mantle from the esteemed World Pitmaster Cup, introduces a next-level online cockfighting experience highlighted by a user-friendly interface.',
         'image' => asset('dist/assets/images/photo-1595398062934-a522dd6dd39d.jpeg'),
         'keywords' =>
-            'sabong world cup.net login, sabong world cup.com, sabong world cup 2023, sabong world cup.net, sww4, sabong world cup 2024 com login, sabong world cup live, sabongworld cup, sabong world cup login, sabong world cup register, sww4 live login, sabong ww4.net, sabong world wide, world cup sabong, sabong world cup live 2023, sabong world cup.net live, sworld cup3.net login, sabong world cup net login, www.sabong world cup.net, sworld cup4, sww sabong, sabongww4, www sabong, sabong world cup live register, sabong world cup, sabongworldcup, sabong worldcup',
+            'sabong world cup, swc sabong, swc online sabong, swc sabong live, swc sabong world cup, sabong world cup live, sabong world cup site, swc sabong registration, sabong world cup register, sabongworldcup, sabong world cup 2023, sabong worldcup, sabong word cup, sabong swc, sww sabong, sabong online registration, sabong world cup login, swc sabong live today, world cup sabong, sww online sabong, swc sabong login, online sabong swc, sworldcup.net, swc online sabong live, swc logo sabong, sww sabong register, sabong worldcup.net login, sabong worldcup.com, sabong worldcup.net, sww4, sabong worldcup 2024 com login, sabong worldcup live, sabong worldcup login, sww4 live login, sabong ww4.net, sabong world wide, sabong worldcup live 2023, sabong worldcup.net live, sworldcup3.net login, sabong worldcup net login, www.sabong worldcup.net, sworldcup4, sabongww4, www sabong, sabong worldcup live register, sabongworldcup, sabong worldcup0',
+             'robots' => 'all'
     ])
 
 
@@ -166,7 +167,7 @@
 
                 <!-- Notifications Dropdown Menu -->
 
-                <li class="nav-item">
+               {{--  <li class="nav-item">
                     <a class="nav-link" data-widget="fullsasdcreen" href="/home" role="button">
                         <i class="fas fa-home"></i> <span style="color: orange">HOME</span>
                     </a>
@@ -180,7 +181,7 @@
                     <a class="nav-link" data-widget="fullsasdcreen" href="/list-cashins" role="button">
                          <small style="font-size: 9px; color: red; font-weight: 700">CREDIT HISTORY</small>
                     </a>
-                </li>
+                </li>--}}
                 {{-- <li class="nav-item">
                     <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#"
                         role="button">
